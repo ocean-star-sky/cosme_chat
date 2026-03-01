@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cosme-primary: #b84d73;
+  --cosme-primary-light: #f3e5ec;
+  --cosme-primary-dark: #8e3a5a;
+}
+
+body {
+  color: #333;
+  background: #fff;
+}
