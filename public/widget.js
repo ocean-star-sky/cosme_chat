@@ -138,11 +138,17 @@
       }
     } catch(ex) {}
 
-    // 閲覧中商品（親PWAのグローバル変数から取得）
+    // 閲覧中商品（CosmeApp.currentResultから取得）
     var currentProduct = null;
     try {
-      if (window.cosmeCurrentProduct) {
-        currentProduct = window.cosmeCurrentProduct;
+      if (window.CosmeApp && window.CosmeApp.currentResult) {
+        var r = window.CosmeApp.currentResult;
+        currentProduct = {
+          name: r.productName || r.name || '',
+          brand: r.brand || '',
+          barcode: r.barcode || '',
+          category: r.category || ''
+        };
       }
     } catch(ex) {}
 
